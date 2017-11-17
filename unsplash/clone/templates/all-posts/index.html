@@ -38,13 +38,18 @@
 
         <div class="row">
 
-            <h1>
-                hsalpsnU
-            </h1>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-            <article>
-                This is a clone of <a href="https://unsplash.com/">Unsplah</a>, a photo sharing website
-            </article>
+                <h1>
+                    hsalpsnU
+                </h1>
+
+                <article>
+                    This is a clone of <a href="https://unsplash.com/">Unsplah</a>, a photo sharing website
+                </article>
+                
+            </div>
+
 
         </div>
 
@@ -55,7 +60,7 @@
 
             {% for image_post in image_posts|slice:":20" %}
 
-                <div class="col-md-4 col-lg-4 imageColumn">
+                <div class="col-sm-6 col-md-4 col-lg-4 imageColumn">
                     
                     <a href="{% url 'imagePost' image_post.id%}">
 

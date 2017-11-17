@@ -1,1 +1,7 @@
 /*Style image-post template*/
+
+
+.imagePostTags{
+    float: left;
+    margin-left: 0.5em;
+}

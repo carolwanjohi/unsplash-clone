@@ -14,11 +14,26 @@
 
     {{block.super}}
     <div class="container-fluid">
-        <img src="{{image_post.image.url}}" alt="{{image_post.name}}" class="img-responsive">
-        {% for tag in image_post.tags.all %}
-            <small>
-                {{tag.name}}
-            </small>
-        {% endfor %}
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <img src="{{image_post.image.url}}" alt="{{image_post.name}}" class="img-responsive">
+                
+            </div>
+        </div>
+        
+        <div class="row tagsRow">
+
+            {% for tag in image_post.tags.all %}
+
+                <small class="imagePostTags">
+                    {{tag.name}}
+                </small>
+
+            {% endfor %}
+            
+        </div>
     </div>
 {% endblock %}
