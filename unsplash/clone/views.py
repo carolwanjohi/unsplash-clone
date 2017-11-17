@@ -25,4 +25,15 @@ def tag(request,tag_id):
     title = f'{tag.name} phots'
     return render(request, 'all-posts/tag.html', {"title":title, "tag":tag, "image_posts":image_posts})
 
+def image_post(request,image_post_id):
+    '''
+    View function to display an image in full
+    '''
+    try:
+        image_post = ImagePost.objects.get(id=image_post_id)
+    except DoesNotExist:
+        raise Http404()
+    title = f'{image_post.name}'
+    return render(request, 'all-posts/image-post.html', {"title":title, "image_post":image_post})
+
 

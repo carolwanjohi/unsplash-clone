@@ -30,8 +30,12 @@
             {% for image_post in image_posts %}
 
                 <div class="col-md-4 col-lg-4 imageColumn">
+                    
+                    <a href="{% url 'imagePost' image_post.id%}">
 
-                    <img src="{{image_post.image.url}}" alt="{{image_post.name}}" class="img-responsive">
+                        <img src="{{image_post.image.url}}" alt="{{image_post.name}}" class="img-responsive">
+
+                    </a>
 
                 </div>
 
