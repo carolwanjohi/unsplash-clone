@@ -4,5 +4,6 @@
 }
 
 img.img-responsive{
-    margin-top: 0.75em;
+    margin-top: 0.25em;
+    height: 45vh;
 }

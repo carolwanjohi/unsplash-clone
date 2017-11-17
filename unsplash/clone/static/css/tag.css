@@ -1,4 +1,5 @@
 /*Style the tag template*/
-.imageColumn{
-    margin-top: 0.75em;
+img.img-responsive{
+    margin-top: 0.25em;
+    height: 45vh;
 }
