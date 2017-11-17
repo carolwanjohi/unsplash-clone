@@ -14,3 +14,7 @@ a.navbar-brand.siteIcon {
 a.navbar-brand.siteIcon:hover{
     color: black;
 }
+
+.searchForm{
+    margin: 0.5em;
+}

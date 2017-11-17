@@ -36,4 +36,21 @@ def image_post(request,image_post_id):
     title = f'{image_post.name}'
     return render(request, 'all-posts/image-post.html', {"title":title, "image_post":image_post})
 
+def search_results(request):
+    '''
+    View function to display search results
+    '''
+    if 'tag' in request.GET and request.GET['tag']:
+        search_term = request.GET.get('tag')
+        searched_tags = tags.search_by_tag(search_term)
+        single_tag = searched_tags[0]
+        image_posts = ImagePost.objects.filter(tags=single_tag).all()
+        message = f'{search_term}'
+        title = f'{search_term}'
+        return render(request, 'all-posts/search.html', {"title": title, "message":message, "image_posts":image_posts, "tags":searched_tags})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'all-posts/search.html', {"message":message})
+
 
