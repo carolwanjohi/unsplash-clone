@@ -15,11 +15,18 @@
 
     {% block styles %}
         {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/base.css'%}">
     {% endblock %}
     
 </head>
 
 <body>
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
+
+    <h1>Does css work?</h1>
+
+    <!-- Content from child templates -->
 
     {% block content %}
     {% endblock %}
