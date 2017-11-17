@@ -84,6 +84,43 @@ class tags(models.Model):
         tags = cls.objects.filter(name__icontains=search_term)
         return tags
 
+class ImagePost(models.Model):
+    '''
+    Class that defines an image post
+    '''
+    name = models.CharField(max_length=30)
+    user = models.ForeignKey(User)
+    tags = models.ManyToManyField(tags)
+    image = models.ImageField(upload_to='posts/')
+
+    def __str__(self):
+        return self.name
+
+    def save_image_post(self):
+        '''
+        Method to save a new image post to the database
+        '''
+        self.save()
+
+    def delete_image_post(self):
+        '''
+        Method to delete a image post from the database
+        '''
+        self.delete()
+
+    @classmethod
+    def get_image_posts(cls):
+        '''
+        Method that gets all image posts from the database
+
+        Returns:
+            gotten_image_posts : list of image post objects from the database
+        '''
+        gotten_image_posts = ImagePost.objects.all()
+        return gotten_image_posts
+
+
+
 
 
 

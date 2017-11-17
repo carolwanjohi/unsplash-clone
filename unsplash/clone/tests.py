@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import User, tags
+from .models import User, tags, ImagePost
 
 # Create your tests here.
 class UserTestClass(TestCase):
@@ -57,6 +57,7 @@ class tagsTestClass(TestCase):
         '''
         Method that sets up a tags instance before each test
         '''
+        # Create a tags instance
         self.new_tag = tags(name='Python')
 
     def test_instance(self):
@@ -65,7 +66,7 @@ class tagsTestClass(TestCase):
         '''
         self.assertTrue( isinstance(self.new_tag, tags) )
 
-    def test_save_editor(self):
+    def test_save_tag(self):
         '''
         Test case to check is a tag is saved in the database
         '''
@@ -98,6 +99,58 @@ class tagsTestClass(TestCase):
         self.new_tag.save_tag()
         found_tags = tags.search_by_tag('Python')
         self.assertTrue( len(found_tags) == 1)
+
+class ImagePostTestClass(TestCase):
+    '''
+    Test case for ImagePost class
+    '''
+    def setUp(self):
+        '''
+        Method that sets up an image post instance before each test
+        '''
+        # Create and save a user
+        self.james = User(first_name = 'James', last_name ='Muriuki', email ='james@moringaschool.com')
+        self.james.save_user()
+
+        # Create and save a tag
+        self.tag = tags(name='Testing')
+        self.tag.save_tag()
+
+        # Create an image post instance
+        self.new_image_post = ImagePost(name = 'Python James', user=self.james)
+
+    def test_instance(self):
+        '''
+        Test case to check if self.new_image_post in an instance of ImagePost class
+        '''
+        self.assertTrue( isinstance(self.new_image_post, ImagePost) )
+
+    def test_save_image_post(self):
+        '''
+        Test case to check is an image post is saved in the database
+        '''
+        self.new_image_post.save_image_post()
+        gotten_image_posts = ImagePost.objects.all()
+        self.assertTrue( len(gotten_image_posts) > 0 )
+
+    def test_delete_image_post(self):
+        '''
+        Test case to check if an image post is deleted from the database
+        '''
+        self.new_image_post.save_image_post()
+        gotten_image_posts = ImagePost.objects.all()
+        self.new_image_post.delete_image_post()
+        self.assertTrue( len(gotten_image_posts) == 0 )
+
+    def test_get_image_post(self):
+        '''
+        Test case to check if all image posts are gotten from the database
+        '''
+        self.new_image_post.save_image_post()
+        gotten_image_posts = ImagePost.get_image_posts()
+        existing_image_posts = ImagePost.objects.all()
+        self.assertTrue( len(gotten_image_posts) == len(existing_image_posts))
+
 
 
 
