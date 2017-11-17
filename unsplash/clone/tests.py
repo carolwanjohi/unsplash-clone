@@ -91,6 +91,14 @@ class tagsTestClass(TestCase):
         existing_tags = tags.objects.all()
         self.assertTrue( len(gotten_tags) == len(existing_tags))
 
+    def test_search_by_tag(self):
+        '''
+        Test case to check if tags containg a search term is gotten from the database 
+        '''
+        self.new_tag.save_tag()
+        found_tags = tags.search_by_tag('Python')
+        self.assertTrue( len(found_tags) == 1)
+
 
 
 

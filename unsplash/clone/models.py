@@ -70,4 +70,20 @@ class tags(models.Model):
         gotten_tags = tags.objects.all()
         return gotten_tags
 
+    @classmethod
+    def search_by_tag(cls,search_term):
+        '''
+        Method that gets tags matching the specific search term
+
+        Args:
+            search_term : specific tag name from the user
+
+        Returns
+            tags : list of tags objects from the database matching the specific search term
+        '''
+        tags = cls.objects.filter(name__icontains=search_term)
+        return tags
+
+
+
 
