@@ -2,3 +2,7 @@
 .tagsList li{
     float: left;
 }
+
+img.img-responsive{
+    margin-top: 0.75em;
+}
