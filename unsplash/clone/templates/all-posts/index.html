@@ -23,7 +23,9 @@
 
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 
-                        <li>{{tag.name}}</li>
+                        <li>
+                            <a href="{%url 'tag' tag.id%}">{{tag.name}}</a>
+                        </li>
                         
                     </div>
 
@@ -36,9 +38,9 @@
 
         <div class="row">
 
-            <h2>
+            <h1>
                 hsalpsnU
-            </h2>
+            </h1>
 
             <article>
                 This is a clone of <a href="https://unsplash.com/">Unsplah</a>, a photo sharing website

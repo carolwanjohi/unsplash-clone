@@ -1,0 +1,30 @@
+{% extends 'all-posts/base.html' %}
+{% load staticfiles%}
+
+<!-- Styles block -->
+{% block styles %}
+
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'css/tag.css'%}">
+
+{% endblock %}
+
+<!-- Content block -->
+{% block content %}
+
+    {{block.super}}
+    <div class="container-fluid">
+
+        <div class="row singleTagRow">
+
+            <h1>
+                {{tag.name}}
+            </h1>
+
+        </div>
+
+        <hr>
+
+    </div>
+
+{% endblock %}

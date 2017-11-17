@@ -3,11 +3,14 @@
     background-color: white;
     border-color: white;
 }
+.siteIcon{
+    font-size: 2.75em;
+}
 
-a.navbar-brand.siteName {
+a.navbar-brand.siteIcon {
     color: black;
 }
 
-a.navbar-brand.siteName:hover{
-    color: blue;
+a.navbar-brand.siteIcon:hover{
+    color: black;
 }
