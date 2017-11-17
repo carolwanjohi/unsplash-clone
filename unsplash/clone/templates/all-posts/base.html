@@ -24,13 +24,13 @@
     <!-- Navbar -->
     {% include 'navbar.html' %}
 
-    <h1>Does css work?</h1>
-
     <!-- Content from child templates -->
 
     {% block content %}
     {% endblock %}
-
+    
+    <!-- Javascript -->
+    
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         {% bootstrap_javascript %}

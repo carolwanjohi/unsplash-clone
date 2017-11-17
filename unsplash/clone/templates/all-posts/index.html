@@ -1,4 +1,13 @@
 {% extends 'all-posts/base.html' %}
+{% load staticfiles%}
+
+<!-- Styles block -->
+{% block styles %}
+
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+
+{% endblock %}
 
 <!-- Content block -->
 {% block content %}
@@ -7,8 +16,19 @@
     <div class="container-fluid">
 
         <div class="row tagRow">
-            <h1>{{message}}</h1>
-            <h4>List of tags</h4>
+
+            <ul class="tagsList list-unstyled">
+
+                {% for tag in tags|slice:":6"  %}
+
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+                        <li>{{tag.name}}</li>
+                        
+                    </div>
+
+                {% endfor %}
+            </ul>
 
         </div>
 

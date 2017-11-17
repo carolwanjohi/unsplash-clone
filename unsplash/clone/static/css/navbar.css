@@ -1,0 +1,13 @@
+/*Style the navbar template*/
+.navbar{
+    background-color: white;
+    border-color: white;
+}
+
+a.navbar-brand.siteName {
+    color: black;
+}
+
+a.navbar-brand.siteName:hover{
+    color: blue;
+}
