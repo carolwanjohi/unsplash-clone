@@ -1,9 +1,55 @@
 /*Style the index template*/
 .tagsList li{
-    float: left;
+    float: left; 
+    font-family: 'Varela', sans-serif;
+}
+
+div.col-xs-2.col-sm-2.col-md-2.col-lg-2.well{
+    border-radius: 2.5em;
+    max-width: 10vw;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    background-color: #FAFAFF;
+    border-color: #2B303A;
+}
+
+div.col-xs-2.col-sm-2.col-md-2.col-lg-2.well > li > a{
+    color: #040403;
+}
+
+div.col-xs-2.col-sm-2.col-md-2.col-lg-2.well > li > a:hover{
+    color: #92AFD7;
+    text-decoration: none;
+}
+
+.headerRow {
+    font-family: 'Varela', sans-serif;
+    text-align: left;
+}
+
+.siteName{
+    font-size: 3.5em;
+    margin-left: 0.70em;
+    margin-right: 3em;
+}
+
+.siteIntro{
+    font-size: 1em;
+    margin-left: 2.5em;
+    margin-right: 3em;
 }
 
 img.img-responsive{
     margin-top: 0.25em;
     height: 45vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
+
+@media only screen and (max-width: 1024px) {
+    .tagRow{
+        display: none;
+    }
+}
+
