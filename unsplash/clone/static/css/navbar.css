@@ -1,18 +1,20 @@
 /*Style the navbar template*/
 .navbar{
-    background-color: white;
-    border-color: white;
+    background-color: #fff;;
+    border-color: #fff;;
+    font-family: 'Varela', sans-serif;
+
 }
 .siteIcon{
     font-size: 2.75em;
 }
 
 a.navbar-brand.siteIcon {
-    color: black;
+    color: #040403;
 }
 
 a.navbar-brand.siteIcon:hover{
-    color: black;
+    color: #C6C7C4;
 }
 
 .searchForm{
@@ -20,12 +22,15 @@ a.navbar-brand.siteIcon:hover{
 }
 
 ul.nav.navbar-nav > li > a {
-    color: black;
+    color: #040403;
+    margin: 0.5em;
+    margin-top: 1em;
 }
 
 ul.nav.navbar-nav > li > a:hover {
-    color: black;
+    color: #C6C7C4;
 }
+
 .homeOnPhone {
     display: none;
 }
@@ -44,4 +49,19 @@ ul.nav.navbar-nav > li > a:hover {
         color: black;
     }
 }
+
+@media only screen and (min-width: 1024px) {
+    .navbar-form, ul.nav.navbar-nav > li > a {
+        margin-left: 3em;
+        margin-top: 1em;
+    }
+
+    ul.nav.navbar-nav > li > a {
+        font-size: 1.15em;
+    }
+    
+
+
+}
+
 
