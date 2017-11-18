@@ -53,4 +53,12 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'all-posts/search.html', {"message":message})
 
+def collections(request):
+    '''
+    View function to display all the tags available
+    '''
+    gotten_tags = tags.get_tags()
+    title = 'Collections'
+    return render(request,'all-posts/collections.html', {"tags":gotten_tags})
+
 

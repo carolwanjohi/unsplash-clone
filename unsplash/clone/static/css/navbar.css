@@ -18,3 +18,30 @@ a.navbar-brand.siteIcon:hover{
 .searchForm{
     margin: 0.5em;
 }
+
+ul.nav.navbar-nav > li > a {
+    color: black;
+}
+
+ul.nav.navbar-nav > li > a:hover {
+    color: black;
+}
+.homeOnPhone {
+    display: none;
+}
+
+@media only screen and (max-width: 425px) {
+    li.collections{
+        display: none;
+    }
+    .homeOnPhone {
+        display: block;
+        margin-top: 0.35em;
+        font-size: 2.5em;   
+    }
+    i.glyphicon.glyphicon-home{
+        margin-left: 1em;
+        color: black;
+    }
+}
+

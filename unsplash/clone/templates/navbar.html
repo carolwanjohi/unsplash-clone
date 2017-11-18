@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse" role="navigation" >
 
         <div class="container-fluid">
 
@@ -25,6 +25,10 @@
 
                 <a href="{% url 'index'%}" class="navbar-brand siteIcon">
                     <i class="glyphicon glyphicon-camera"></i>
+                </a>
+
+                <a href="{% url 'index'%}" class="homeOnPhone">
+                    <i class="glyphicon glyphicon-home"></i>
                 </a>
 
             </div>
@@ -53,6 +57,22 @@
 
                 </form>
 
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="{% url 'index'%}" >
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="collections">
+                        <a href="{% url 'collections'%}">
+                            Collections
+                        </a>
+                    </li>
+                </ul>
             </div>
 
         </div>
