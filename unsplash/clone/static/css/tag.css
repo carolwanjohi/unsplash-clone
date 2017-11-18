@@ -1,5 +1,5 @@
 /*Style the tag template*/
-h1.tagName{
+h1.tagName, h1.searchMessage{
     font-family: 'Varela', sans-serif;
     font-size: 2.75em;
     margin-left: 0.70em;
