@@ -1,5 +1,15 @@
 /*Style the tag template*/
+h1.tagName{
+    font-family: 'Varela', sans-serif;
+    font-size: 2.75em;
+    margin-left: 0.70em;
+    margin-right: 3em;
+}
+
 img.img-responsive{
     margin-top: 0.25em;
     height: 45vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
