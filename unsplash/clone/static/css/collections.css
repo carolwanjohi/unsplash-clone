@@ -1,0 +1,42 @@
+/*Style collections template*/
+.tagsList{
+    font-family: 'Varela', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.col-xs-12.col-sm-12.col-md-4.col-lg-4.well{
+    border-radius: 2.5em;
+    max-width: 20vw;
+    margin-left: 0.15em;
+    margin-right: 0.15em;
+    display: block;
+    background-color: #FAFAFF;
+    border-color: #2B303A;
+}
+
+li.text-center > a {
+    color: #040403;
+} 
+
+li.text-center > a:hover {
+    color: #92AFD7;
+    text-decoration: none;
+} 
+
+@media only screen and (max-width: 768px) {
+    .tagsList{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .tagsList{
+        margin-left: 3em;
+        margin-right: 3em;
+        display: block;
+    }
+}
+
