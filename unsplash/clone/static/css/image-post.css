@@ -1,7 +1,36 @@
 /*Style image-post template*/
+img.img-responsive{
+    margin-bottom: 0.25em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 
-
-.imagePostTags{
-    float: left;
+div.col-xs-2.col-sm-2.col-md-2.col-lg-2.well{
+    border-radius: 2.5em;
+    max-width: 10vw;
     margin-left: 0.5em;
+    margin-right: 0.5em;
+    background-color: #FAFAFF;
+    border-color: #2B303A;
+}
+
+div.col-xs-2.col-sm-2.col-md-2.col-lg-2.well > small.imagePostTags > a{
+    color: #040403;
+}
+
+div.col-xs-2.col-sm-2.col-md-2.col-lg-2.well > small.imagePostTags > a:hover{
+    color: #92AFD7;
+    text-decoration: none;
+}
+
+.imagePostTags{ 
+    font-family: 'Varela', sans-serif;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 1024px) {
+    .tagsRow{
+        display: none;
+    }
 }

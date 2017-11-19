@@ -23,17 +23,25 @@
                 
             </div>
         </div>
+
+        <div class="container">
         
-        <div class="row tagsRow">
+            <div class="row tagsRow">
 
-            {% for tag in image_post.tags.all %}
+                {% for tag in image_post.tags.all %}
 
-                <small class="imagePostTags">
-                    {{tag.name}}
-                </small>
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 well">
 
-            {% endfor %}
-            
+                        <small class="imagePostTags">
+                            <a href="{%url 'tag' tag.id%}">{{tag.name}}</a>
+                        </small>
+                        
+                    </div>
+
+                {% endfor %}
+                
+            </div>
+
         </div>
     </div>
 {% endblock %}
