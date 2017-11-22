@@ -5,7 +5,7 @@
 ## By **[Carol Wanjohi](https://github.com/carolwanjohi)**
 
 ## Description
-[This]() is a web application that is a clone of the popular photo sharing website known as [Unspalsh](https://unsplash.com/). Users can view photographs uploaded by the admin of the site.
+[This](https://django-unsplash-clone-trial.herokuapp.com/) is a web application that is a clone of the popular photo sharing website known as [Unspalsh](https://unsplash.com/). Users can view photographs uploaded by the admin of the site.
 
 ## User Stories
 As a user I would like:
@@ -25,15 +25,16 @@ As a user I would like:
 
 ## Setup/Installation Requirements
 
-* Click [hsalpsnU]() <br/>
+* Click [hsalpsnU](https://django-unsplash-clone-trial.herokuapp.com/) <br/>
   or <br/>
-* Copy [hsalpsnU]() and  Paste the link on your prefered browser
+* Copy [hsalpsnU](https://django-unsplash-clone-trial.herokuapp.com/) and  Paste the link on your prefered browser
 
 This requires internet connection.
 
 ## Known Bugs
 
-No known bugs
+* to see full image
+* to copy image link
 
 ## Technologies Used
 - Python3.6
