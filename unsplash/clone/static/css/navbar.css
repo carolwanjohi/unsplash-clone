@@ -9,6 +9,11 @@
     font-size: 2.75em;
 }
 
+div.input-group{
+    width: 100%;
+    border-radius: 5em;
+}
+
 a.navbar-brand.siteIcon {
     color: #040403;
 }

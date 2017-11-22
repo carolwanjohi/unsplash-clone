@@ -41,10 +41,11 @@ div.col-xs-2.col-sm-2.col-md-2.col-lg-2.well > li > a:hover{
 
 img.img-responsive{
     margin-top: 0.25em;
-    height: 45vh;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    width: 100%;
+    height: auto;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*display: block;*/
 }
 
 @media only screen and (max-width: 1024px) {
