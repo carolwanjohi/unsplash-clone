@@ -33,7 +33,8 @@ This requires internet connection.
 
 ## Known Bugs
 
-No known bugs
+* to see full image
+* to copy image link
 
 ## Technologies Used
 - Python3.6
