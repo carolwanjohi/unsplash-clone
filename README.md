@@ -21,7 +21,7 @@ As a user I would like:
 | Display the available tags | N/A | List of tag |
 | View photos in a tag | **Click on a tag** | Directed to a page displaying images for the selected tag |
 | Display full image | **Click on an image** | Directed to a page displaying the full image |
-| Copy an image's link | **Right click an image** | Image link is copied |
+| Copy an image's link | **Click** Copy Image Link button | Display modal with image url and link for the image |
 
 ## Setup/Installation Requirements
 
@@ -32,14 +32,12 @@ As a user I would like:
 This requires internet connection.
 
 ## Known Bugs
-
-* to see full image
-* to copy image link
+ No known bugs
 
 ## Technologies Used
-- Python3.6
-- Django
-- Bootstrap
+- Python 3.6.2
+- Django 1.11.7
+- Bootstrap 3
 - Postgres Database
 - CSS
 - HTML
