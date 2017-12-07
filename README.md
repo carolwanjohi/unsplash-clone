@@ -21,7 +21,7 @@ As a user I would like:
 | Display the available tags | N/A | List of tag |
 | View photos in a tag | **Click on a tag** | Directed to a page displaying images for the selected tag |
 | Display full image | **Click on an image** | Directed to a page displaying the full image |
-| Copy an image's link | **Click** Copy Image Link button | Display modal with image url and link for the image |
+| Copy an image's link | **Click** copy image link button | Display modal with image url and link for the image |
 
 ## Setup/Installation Requirements
 
