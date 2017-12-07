@@ -46,8 +46,12 @@ def search_results(request):
         try:
             single_tag = searched_tags[0]
             image_posts = ImagePost.objects.filter(tags=single_tag).all()
+
         except IndexError:
-            raise Http404
+
+            message = f'{search_term}'
+            return render(request, 'all-posts/search.html', {"message":message})
+            
         message = f'{search_term}'
         title = f'{search_term}'
         return render(request, 'all-posts/search.html', {"title": title, "message":message, "image_posts":image_posts, "tags":searched_tags})
