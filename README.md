@@ -26,7 +26,7 @@ As a user I would like:
 ## Setup/Installation Requirements
 
 ### Prerequisites
-* Python 3.6.1
+* Python 3.6.2
 * Virtual environment
 * Postgres Database
 * Internet
