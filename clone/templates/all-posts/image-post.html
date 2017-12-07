@@ -13,24 +13,47 @@
 {% block content %}
 
     {{block.super}}
-    <div class="container-fluid">
+    <div class="container-fluid image-overlay">
 
-        <div class="row">
+        <a href="{% url 'index'%}">
+            <button type="button" class="close-overlay">
+                &times;
+            </button>
+        </a>
 
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-default image-panel">
 
-                <img src="{{image_post.image.url}}" alt="{{image_post.name}}" class="img-responsive">
+            <div class="panel-heading">
+
+                <img src="{% static 'images/gin-chan.png'%}" alt="avatar" class="img-responsive avatar">
+
+                <h4 class="user-info">
+                    {{image_post.user.first_name}} {{image_post.user.last_name}}
+                </h4>
+
+                <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal">
+                    <h5>
+                        Copy Image Url
+                    </h5>
+                </button>
                 
             </div>
-        </div>
 
-        <div class="container">
-        
-            <div class="row tagsRow">
+            <div class="panel-body">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <img src="{{image_post.image.url}}" alt="{{image_post.name}}" class="img-responsive imagePost">
+                
+                </div>
+                
+            </div>
+
+            <div class="panel-footer">
 
                 {% for tag in image_post.tags.all %}
 
-                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 well">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 
                         <small class="imagePostTags">
                             <a href="{%url 'tag' tag.id%}">{{tag.name}}</a>
@@ -39,9 +62,38 @@
                     </div>
 
                 {% endfor %}
-                
+
             </div>
 
         </div>
+
+        <!-- Image Link URL -->
+        <div id="myModal" class="modal fade" role="dialog">
+
+            <div class="modal-dialog">
+
+                <!-- Modal header -->
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                
+                <!-- Modal content -->
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <a href="{{image_post.image.url}}">
+                            Image
+                        </a>
+                        <h4>https://django-unsplash-clone.herokuapp.com{{image_post.image.url}}</h4>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
     </div>
 {% endblock %}

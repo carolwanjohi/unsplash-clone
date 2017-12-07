@@ -39,13 +39,26 @@ div.col-xs-2.col-sm-2.col-md-2.col-lg-2.well > li > a:hover{
     margin-right: 3em;
 }
 
-img.img-responsive{
-    margin-top: 0.25em;
-    width: 100%;
-    height: auto;
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*display: block;*/
+.photo {
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}   
+
+.photo img { 
+    width: 100%; 
+    margin: 12px 0px;
+}
+
+@media only screen and (max-width: 500px) { 
+    .photo {
+        -webkit-column-count: 1; /* Chrome, Safari, Opera */
+        -moz-column-count: 1; /* Firefox */
+        column-count: 1;
+    }       
 }
 
 @media only screen and (max-width: 1024px) {
