@@ -47,17 +47,18 @@
 
         <hr>
 
-            <div class="row imageRow">
+            <div class="photo">
 
-                {% for image_post in image_posts %}
+                {% for image_post in image_posts%}
 
-                    <div class="col-sm-6 col-md-4 col-lg-4 imageColumn">
-                        
+                    <div class="imageColumn">
+                    
                         <a href="{% url 'imagePost' image_post.id%}">
 
                             <img src="{{image_post.image.url}}" alt="{{image_post.name}}" class="img-responsive">
 
                         </a>
+
 
                     </div>
 
