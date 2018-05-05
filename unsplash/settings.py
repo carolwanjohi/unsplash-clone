@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'unsplash',
-        'USER': 'carol',
-        'PASSWORD': 'carol1',
+        'USER': ,
+        'PASSWORD': ,
     }
 }
 import dj_database_url
