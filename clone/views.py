@@ -6,6 +6,7 @@ from .models import tags, ImagePost
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializer import ImagePostSerializer
+from .permissions import IsAdminOrReadOnly
 
 # Create your views here.
 def index(request):
@@ -77,6 +78,7 @@ class ImagePostList(APIView):
     '''
     API View to handle requests
     '''
+    permission_classes = (IsAdminOrReadOnly,)
 
     def get(self, request, format=None):
         '''

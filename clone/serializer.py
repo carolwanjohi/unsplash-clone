@@ -7,4 +7,4 @@ class ImagePostSerializer(serializers.ModelSerializer):
     '''
     class Meta:
         model = ImagePost
-        fields = ('name', 'image', 'tags')
+        fields = ('id', 'name', 'image', 'tags')
