@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect
 from django.http import Http404
 from .models import tags, ImagePost
 
+# API Practice
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializer import ImagePostSerializer
+
 # Create your views here.
 def index(request):
     '''
@@ -68,4 +73,16 @@ def collections(request):
     title = 'Collections'
     return render(request,'all-posts/collections.html', {"tags":gotten_tags})
 
+class ImagePostList(APIView):
+    '''
+    API View to handle requests
+    '''
+
+    def get(self, request, format=None):
+        '''
+        Get method that queries the database and gets all the ImagePost instances in the database 
+        '''
+        all_image_post = ImagePost.objects.all()
+        serializers = ImagePostSerializer(all_image_post, many=True)
+        return Response(serializers.data)
 
