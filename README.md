@@ -34,7 +34,7 @@ As a user I would like:
 
 ### Installation Process
 ```
-git clone https://github.com/carolwanjohi/unsplash-clone.git && cd cd unsplash-clone
+git clone https://carolwanjohi@bitbucket.org/carolwanjohi/unsplash-clone-django.git && cd cd unsplash-clone
 virtualenv virtual or python3.6 -m venv virtual
 source virtual/bin/activate
 pip3 install -r requirements.txt
