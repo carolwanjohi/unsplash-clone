@@ -49,7 +49,7 @@ PASSWORD=<your postgresql password>
 * Create Postgres Database
 ```
 psql
-CREATE DATABASE unsplash
+CREATE DATABASE unsplash;
 ```
 ### Running the application
 ```
