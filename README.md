@@ -2,7 +2,7 @@
 #### This is a clone of [Unspalsh](https://unsplash.com/), a popular photo sharing website, created using Django, 17/11/2017
 
 
-#### By **[Carol Wanjohi](https://github.com/carolwanjohi)**
+#### By **[Carol Wanjohi](https://bitbucket.org/carolwanjohi/)**
 
 ## Description
 [This](https://django-unsplash-clone.herokuapp.com/) is a web application that is a clone of the popular photo sharing website known as [Unspalsh](https://unsplash.com/). Users can view photographs uploaded by the admin of the site.
@@ -76,7 +76,5 @@ CREATE DATABASE unsplash;
 
 ### License
 
-MIT (c) 2017 **[Carol Wanjohi](https://github.com/carolwanjohi)**
-
-
+MIT (c) 2017 **[Carol Wanjohi](https://bitbucket.org/carolwanjohi/)**
 
