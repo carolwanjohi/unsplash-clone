@@ -2,3 +2,6 @@
 virtual/
 *.pyc
 .env
+clone/
+unsplash/
+db.sqlite3
